@@ -2,12 +2,12 @@
 
 import './App.css'
 import React from 'react'
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
-import Portfolio from './components/PortfolioPage/portfolio'
-// import Contact from './components/ContactPage/Contact'
-import Pricing from './components/Pricing'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Portfolio from './components/PortfolioPage/portfolio';
+import Contact from './components/ContactPage/Contact';
+import Pricing from './components/Pricing';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 function App() {
   const router = createBrowserRouter([
@@ -23,15 +23,15 @@ function App() {
       path: "/pricing",
       element: <Pricing />
     },
-    // {
-    //   path: "/contact",
-    //   element: <Contact />
-    // }
+    {
+      path: "/contact",
+      element: <Contact />
+    }
   ])
   return (
     <>
-      <Navbar />
       <RouterProvider router={router} />
+      <Navbar />
     </>
   )
 }
