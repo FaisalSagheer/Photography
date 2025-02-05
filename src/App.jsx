@@ -28,7 +28,7 @@ function App() {
         ],
       },
     ],
-    { basename: '/Photography/' }
+    { basename: '/Photography' }
   );
 
   return <RouterProvider router={router} />;
