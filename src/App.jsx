@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import Portfolio from './components/PortfolioPage/portfolio';
 import Contact from './components/ContactPage/Contact';
 import Pricing from './components/Pricing';
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import { RouterProvider, Outlet, createHashRouter } from 'react-router-dom';
 
 const Layout = () => (
   <>
@@ -15,7 +15,7 @@ const Layout = () => (
 );
 
 function App() {
-  const router = createBrowserRouter(
+  const router = createHashRouter(
     [
       {
         path: "/",
@@ -28,7 +28,7 @@ function App() {
         ],
       },
     ],
-    { basename: '/Photography' }
+    // { basename: '/Photography' }
   );
 
   return <RouterProvider router={router} />;
