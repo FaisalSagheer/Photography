@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import Portfolio from './components/PortfolioPage/portfolio';
 import Contact from './components/ContactPage/Contact';
 import Pricing from './components/Pricing';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   // const Router = createBrowserRouter([
@@ -29,15 +29,17 @@ function App() {
   return (
     <>
       {/* <RouterProvider router={Router} /> */}
+      <BrowserRouter>
       <Navbar />
-        <Routes>
-          <Route path='/' element={<Hero />} />
-          <Route path='/portfolio' element={<Portfolio />} />
-          <Route path='/pricing' element={<Pricing />} />
-          <Route path='/contact' element={<Contact />} />
+      <Routes>
+      <Route path='/' element={<Hero />}/>
+      <Route path='/portfolio' element={<Portfolio />}/>
+      <Route path='/pricing' element={<Pricing />}/>
+      <Route path='/contact' element={<Contact />}/>
 
-        </Routes>
-      
+      </Routes>
+      </BrowserRouter>
+
     </>
   )
 }
