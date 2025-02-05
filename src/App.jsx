@@ -1,37 +1,45 @@
-import './App.css';
-import React from 'react';
+import './App.css'
+import React from 'react'
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Portfolio from './components/PortfolioPage/portfolio';
 import Contact from './components/ContactPage/Contact';
 import Pricing from './components/Pricing';
-import { RouterProvider, Outlet, createHashRouter } from 'react-router-dom';
-
-const Layout = () => (
-  <>
-    <Navbar />
-    <Outlet />
-  </>
-);
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
-  const router = createHashRouter(
-    [
-      {
-        path: "/",
-        element: <Layout />,
-        children: [
-          { path: "/", element: <Hero /> },
-          { path: "/portfolio", element: <Portfolio /> },
-          { path: "/pricing", element: <Pricing /> },
-          { path: "/contact", element: <Contact /> },
-        ],
-      },
-    ],
-    // { basename: '/Photography' }
-  );
+  // const Router = createBrowserRouter([
+  //   {
+  //     path: "/",
+  //     element: <Hero />
+  //   },
+  //   {
+  //     path: "/portfolio",
+  //     element: <Portfolio />
+  //   },
+  //   {
+  //     path: "/pricing",
+  //     element: <Pricing />
+  //   },
+  //   {
+  //     path: "/contact",
+  //     element: <Contact />
+  //   }
+  // ])
+  return (
+    <>
+      {/* <RouterProvider router={Router} /> */}
+      <Navbar />
+        <Routes>
+          <Route path='/' element={<Hero />} />
+          <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/pricing' element={<Pricing />} />
+          <Route path='/contact' element={<Contact />} />
 
-  return <RouterProvider router={router} />;
+        </Routes>
+      
+    </>
+  )
 }
 
-export default App;
+export default App
