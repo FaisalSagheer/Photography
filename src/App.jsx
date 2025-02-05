@@ -8,7 +8,7 @@ import Pricing from './components/Pricing';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 function App() {
-  const router = createBrowserRouter([
+  const Router = createBrowserRouter([
     {
       path: "/",
       element: <Hero />
@@ -28,7 +28,7 @@ function App() {
   ])
   return (
     <>
-      <RouterProvider router={router} />
+      <RouterProvider router={Router} />
       <Navbar />
     </>
   )
