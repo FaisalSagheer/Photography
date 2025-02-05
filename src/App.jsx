@@ -10,7 +10,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 const Layout = () => (
   <>
     <Navbar />
-    <Outlet /> {/* This renders the matched child route */}
+    <Outlet/> {/* This renders the matched child route */}
   </>
 );
 
