@@ -1,4 +1,4 @@
-name: Deploy
+name: photography
 
 on:
   push:
