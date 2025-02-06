@@ -8,27 +8,9 @@ import Pricing from './components/Pricing';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
-  // const Router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: <Hero />
-  //   },
-  //   {
-  //     path: "/portfolio",
-  //     element: <Portfolio />
-  //   },
-  //   {
-  //     path: "/pricing",
-  //     element: <Pricing />
-  //   },
-  //   {
-  //     path: "/contact",
-  //     element: <Contact />
-  //   }
-  // ])
+  
   return (
     <>
-      {/* <RouterProvider router={Router} /> */}
       <BrowserRouter basename='/Photography/'>
       <Navbar />
       <Routes>
