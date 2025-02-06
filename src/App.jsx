@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       {/* <RouterProvider router={Router} /> */}
-      <BrowserRouter basename='/Photography'>
+      <BrowserRouter basename='/Photography/'>
       <Navbar />
       <Routes>
       <Route path='/' element={<Hero />}/>
